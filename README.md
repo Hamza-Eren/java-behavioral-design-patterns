@@ -16,6 +16,8 @@ Bu depo, Udemy üzerinde tamamladığım **Design Patterns (Akın Kaldıroğlu)*
 
 ### Uygulanan Tasarım Kalıpları ve İş Senaryoları
 
+#### 🔹 Davranışsal Kalıplar (Behavioral Patterns)
+
 #### 1. Strategy & Simple Factory Pattern (Sıralama Yönetimi)
 * **İş Senaryosu:** Uygulamada farklı veri boyutlarına ve performans ihtiyaçlarına göre (`BubbleSort`, `JavaArraySort`, `ApacheSort`) sıralama stratejileri soyutlaştırılmıştır. Nesne üretim süreçleri `SorterFactory` ile kapsüllenmiş, `SortingContext` vasıtasıyla çalışma zamanında (runtime) algoritmalar arası geçiş sağlanmıştır.
 * **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/behavioral/strategy`
@@ -39,6 +41,30 @@ Bu depo, Udemy üzerinde tamamladığım **Design Patterns (Akın Kaldıroğlu)*
 #### 6. State Pattern (Klima AC Durum Yönetimi)
 * **İş Senaryosu:** Bir klimanın çalışma durumları (`OffState`, `CoolingState`, `HeatingState`) modellenmiştir. Klima nesnesi, karmaşık `if-else` blokları kullanılmadan, o anki aktif durumuna göre butonlara basıldığında farklı davranışlar sergilemektedir (Örn: Kapalıyken mod butonunun uyarı vermesi).
 * **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/behavioral/state`
+
+---
+
+#### 🔹 Yapısal Kalıplar (Structural Patterns)
+
+##### 1. Flyweight Pattern (Oyun Karakteri Hafıza Optimizasyonu)
+* **İş Senaryosu:** Grafik yoğunluklu oyunlardaki asker ve sivil karakterlerin üretimi simüle edilmiştir. Model ve kaplama (texture) gibi ağır veriler tek bir merkezde paylaşılıp hafıza optimizasyonu (RAM) sağlanırken, koordinat ve oyuncu adı gibi hafif veriler dışarıda bırakılmıştır.
+* **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/flyweight`
+
+##### 2. Composite Pattern (Proje ve Görev Ağaç Mimarisi)
+* **İş Senaryosu:** Kurumsal bir projenin alt parçaları (`Task`, `Issue`) ve alt projeleri hiyerarşik ağaç yapısında modellenmiştir. Composite yapısı sayesinde tekil bir görev ile içinde onlarca görev barındıran alt projeler polimorfik olarak aynı arayüz üzerinden yönetilmektedir.
+* **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/composite`
+
+##### 3. Proxy Pattern (Lisans Kontrollü Erişim Denetimi)
+* **İş Senaryosu:** Sınırlı lisans sayısına sahip kurumsal bir yazılıma erişim güvenliği kurgulanmıştır. `LicenseProxy` sınıfı, asıl uygulamaya erişen kullanıcı sayısını denetlemekte, limit aşımında kullanıcıları kuyruğa almakta ve yer açıldığında otomatik olarak uygulamaya dahil etmektedir.
+* **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/proxy`
+
+##### 4. Decorator Pattern (Dinamik Kasko Poliçesi Hesaplama)
+* **İş Senaryosu:** Sürücü yaşı, kaza geçmişi ve ekstra lüks araç donanımlarına göre dinamik olarak değişen bir araç kasko poliçesi mimarisi tasarlanmıştır. Temel kasko nesnesi, çalışma zamanında soğan kabuğu gibi dekoratörlerle sarılarak sınıf patlamasının önüne geçilmiştir.
+* **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/decorator`
+
+##### 5. Bridge Pattern (ORM Çerçeve / Veri Tabanı Soyutlama)
+* **İş Senaryosu:** JPA/EntityFramework benzeri veri tabanından bağımsız bir veri saklama çatısı modellenmiştir. Soyutlama katmanı (`Collection`, `Set`) ile gerçekleştirim katmanı (`SqlServerEngine`, `PostgreSQLEngine`) bir köprü vasıtasıyla birbirinden ayrılarak bağımsız büyümeleri sağlanmıştır.
+* **Paket Konumu:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/bridge`
 
 ---
 
@@ -73,6 +99,8 @@ This repository contains all behavioral design pattern assignments, practical bu
 
 ### Implemented Design Patterns and Business Scenarios
 
+#### 🔹 Behavioral Patterns
+
 #### 1. Strategy & Simple Factory Pattern (Sorting Management)
 * **Business Scenario:** Sorting strategies (`BubbleSort`, `JavaArraySort`, `ApacheSort`) are abstracted based on varying data sizes and performance requirements. Object creation workflows are encapsulated via `SorterFactory`, enabling dynamic, runtime algorithm switching through `SortingContext`.
 * **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/behavioral/strategy`
@@ -96,6 +124,32 @@ This repository contains all behavioral design pattern assignments, practical bu
 #### 6. State Pattern (Air Conditioner AC State Management)
 * **Business Scenario:** Operating states of an air conditioner (`OffState`, `CoolingState`, `HeatingState`) are modeled. Without complex `if-else` or `switch-case` blocks, the AC object exhibits distinct behaviors upon button presses based on its active state (e.g., triggering a warning when the mode button is pressed while the unit is off).
 * **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/behavioral/state`
+
+---
+
+#### 🔹 Structural Patterns
+
+##### 1. Flyweight Pattern (Game Character Memory Optimization)
+* **Business Scenario:** Production of soldier and civilian characters in graphics-intensive games is simulated. Heavy data like models and textures are shared intrinsically to optimize RAM usage, while lightweight extrinsic state data like coordinates are passed externally.
+* **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/flyweight`
+
+##### 2. Composite Pattern (Project and Task Tree Architecture)
+* **Business Scenario:** Sub-components (`Task`, `Issue`) and subprojects of an enterprise project are modeled in a hierarchical tree structure. Singular tasks and complex subprojects containing multiple actions are handled polymorphically via a unified interface.
+* **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/composite`
+
+##### 3. Proxy Pattern (License-Controlled Access Control)
+* **Business Scenario:** An access security system is implemented for an enterprise software application with limited licenses. The `LicenseProxy` class monitors the count of concurrent users, directs excess demands into a waiting queue, and provisions application access automatically when slots open.
+* **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/proxy`
+
+##### 4. Decorator Pattern (Dynamic Car Insurance Premium Calculation)
+* **Business Scenario:** A car insurance premium system that adapts dynamically to driver age, accident history, and premium car accessories is designed. The base insurance instance is wrapped at runtime like an onion skin with concrete decorators, avoiding subclass explosion.
+* **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/decorator`
+
+##### 5. Bridge Pattern (ORM Framework / Database Abstraction)
+* **Business Scenario:** A database-agnostic data persistence framework similar to JPA/Hibernate is modeled. The abstraction layer (`Collection`, `Set`) and the implementation layer (`SqlServerEngine`, `PostgreSQLEngine`) are decoupled through a bridge interface to allow independent scaling.
+* **Package Location:** `src/main/java/tr/com/hamzaeren/designpatterns/structural/bridge`
+
+---
 
 ### Running and Testing the Project Locally
 
