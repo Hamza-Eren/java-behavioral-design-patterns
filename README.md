@@ -1,8 +1,8 @@
 🌐 **Select Language / Dil Seçimi:**
-* [🇹🇷 Türkçe İçerik](#java-davranışsal-tasarım-kalıpları)
-* [🇺🇸 English Content](#java-behavioral-design-patterns)
+* [🇹🇷 Türkçe İçerik](#java-tasarım-kalıpları)
+* [🇺🇸 English Content](#java-design-patterns)
 
-## Java Davranışsal Tasarım Kalıpları
+## Java Tasarım Kalıpları
 
 Bu depo, Udemy üzerinde tamamladığım **Design Patterns (Akın Kaldıroğlu)** eğitimi kapsamındaki tüm davranışsal kalıp ödevlerini, pratik iş senaryolarını ve kurumsal mimari çözümlerini içermektedir. Proje, temiz kod (Clean Code) prensiplerine ve nesne yönelimli programlama (OOP) standartlarına uygun olarak geliştirilmiştir.
 
@@ -72,7 +72,7 @@ Bu depo, Udemy üzerinde tamamladığım **Design Patterns (Akın Kaldıroğlu)*
 
 1. Projeyi GitHub üzerinden bilgisayarınıza klonlayın:
    ```bash
-   git clone https://github.com/Hamza-Eren/java-behavioral-design-patterns.git
+   git clone https://github.com/Hamza-Eren/java-design-patterns.git
    ```
 2. Projeyi IDE'niz (IntelliJ, Eclipse vb.) ile açın. Maven bağımlılıklarının (`pom.xml`) yüklenmesini bekleyin.
 3. Her tasarım kalıbı kendi paketi içinde bağımsız bir `Main.java` test sınıfına sahiptir. Test etmek istediğiniz kalıbın paketine giderek ilgili sınıfı çalıştırabilirsiniz:
@@ -89,7 +89,7 @@ Bu depo, Udemy üzerinde tamamladığım **Design Patterns (Akın Kaldıroğlu)*
 ---
 ---
 
-## Java Behavioral Design Patterns
+## Java Design Patterns
 
 This repository contains all behavioral design pattern assignments, practical business scenarios, and enterprise architecture solutions completed as part of the **Design Patterns (Akın Kaldıroğlu)** course on Udemy. The project is developed in accordance with Clean Code principles and Object-Oriented Programming (OOP) standards.
 
@@ -155,7 +155,7 @@ This repository contains all behavioral design pattern assignments, practical bu
 
 1. Clone the project repository to your local machine via GitHub:
    ```bash
-   git clone https://github.com/Hamza-Eren/java-behavioral-design-patterns.git
+   git clone https://github.com/Hamza-Eren/java-design-patterns.git
    ```
 2. Open the project in your IDE (IntelliJ, Eclipse, etc.) and wait for the Maven dependencies (`pom.xml`) to build.
 3. Each design pattern features an independent `Main.java` test class inside its own package. Navigate to the specific package and execute the respective class to run the simulation:
